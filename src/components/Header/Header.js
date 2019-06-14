@@ -31,8 +31,8 @@ const BurgerMenuLink = ({ history, to, ...props }) => (
 
 const BurgerMenuLinkWithRouter = withRouter(BurgerMenuLink)
 
-export default ({ navItems }) => (
-  <Header aria-label="Carbon Admin App">
+export default ({ navItems, title, ariaLabel }) => (
+  <Header aria-label={ariaLabel || "Carbon Admin App"}>
     <SkipToContent />
     <Mobile>
       <OverflowMenu
@@ -49,10 +49,10 @@ export default ({ navItems }) => (
       </OverflowMenu>
     </Mobile>
     <HeaderName element={Link} to="/" prefix="">
-      GPM Admin
+      {title || 'App Title'}
     </HeaderName>
     <Default>
-      <HeaderNavigation aria-label="Carbon App">
+      <HeaderNavigation aria-label="navigation">
         {navItems.map(({ label, to, ...linkProps }) => (
           <HeaderMenuItem element={Link} to={to} {...linkProps}>
             {label}

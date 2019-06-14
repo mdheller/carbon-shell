@@ -4,6 +4,15 @@ The shell / header, based on Carbon Design's examples
 import { BrowserRouter as Router } from 'react-router-dom';
 
 <Router>
-  <Header navItems={[]} />
+  <Header title='Demo App' navItems={[
+    {
+      to: '/things',
+      label: 'Things'
+    },
+    {
+      to: '/other-things',
+      label: 'Other Things'
+    }
+  ]} />
 </Router>
 ```
