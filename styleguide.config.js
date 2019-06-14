@@ -24,7 +24,8 @@ module.exports = {
   // TODO: moduleAliases not required for now, we add components we need to the context, see above
   moduleAliases: {
     'carbon-components-react': path.resolve(__dirname, 'node_modules/carbon-components-react'),
-    'carbon-icons': path.resolve(__dirname, 'node_modules/carbon-icons')
+    'carbon-icons': path.resolve(__dirname, 'node_modules/carbon-icons'),
+    'react-router-dom': path.resolve(__dirname, 'node_modules/react-router-dom'),
   },
   require: [
     path.join(__dirname, 'node_modules/carbon-components/css/carbon-components.min.css')
