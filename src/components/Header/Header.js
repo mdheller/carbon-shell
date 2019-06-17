@@ -54,7 +54,7 @@ export default ({ navItems, title, ariaLabel }) => (
     <Default>
       <HeaderNavigation aria-label="navigation">
         {navItems.map(({ label, to, ...linkProps }) => (
-          <HeaderMenuItem element={Link} to={to} {...linkProps}>
+          <HeaderMenuItem key={to} element={Link} to={to} {...linkProps}>
             {label}
           </HeaderMenuItem>
         ))}
